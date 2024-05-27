@@ -13,6 +13,15 @@ function deleteStudent(index) {
     renderStudentList();
 }
 
+function toggleSearch() {
+    const searchInputGroup = document.querySelector('.search-input-group');
+    if (searchInputGroup.style.display === 'flex') {
+        searchInputGroup.style.display = 'none';
+    } else {
+        searchInputGroup.style.display = 'flex';
+    }
+}
+
 // Function to render the student list
 function renderStudentList() {
     const studentList = document.getElementById('studentList');
@@ -20,18 +29,18 @@ function renderStudentList() {
 
     students.forEach((student, index) => {
         const card = document.createElement('div');
-        card.className = 'col-md-4 mb-4';
+        card.className = 'col-md-4  mr-0';
         card.innerHTML = `
             <div class="card text-center">
-                <div class="card-header bg-warning">
-                    <img src="${student.gender === 'Male' ? 'student 1.png' : 'student 2.png'}" alt="${student.gender}" class="rounded-circle" width="100" height="100">
+                <div class="card-header">
+                    <img src="${student.gender === 'Male' ? 'student 1.png' : 'student 2.png'}" alt="${student.gender}" class="rounded-circle w-150 h-150">
                 </div>
-                <div class="card-body bg-dark text-white">
-                    <p class="card-text">Student Name - ${student.name}</p>
-                    <p class="card-text">Gender - ${student.gender}</p>
-                    <p class="card-text">DOB  - ${student.dob}</p>
-                    <p class="card-text">Address - ${student.address}</p>
-                    <p class="card-text">Contact - ${student.contact}</p>
+                <div class="card-body  text-white">
+                    <p class="card-text"><strong>Student Name - </strong> ${student.name}</p>
+                    <p class="card-text"><strong>Gender - </strong> ${student.gender}</p>
+                    <p class="card-text"><strong>DOB - </strong> ${student.dob}</p>
+                    <p class="card-text"><strong>Address - </strong> ${student.address}</p>
+                    <p class="card-text"><strong>Contact - </strong> ${student.contact}</p>
                     <button class="btn btn-danger mt-3" onclick="deleteStudent(${index})">Delete</button>
                 </div>
             </div>

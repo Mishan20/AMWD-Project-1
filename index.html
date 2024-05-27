@@ -5,41 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Management System</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg d-flex justify-content-between">
         <a class="navbar-brand" href="#">
             <div class="d-flex flex-column align-items-center">
-                <img src="./accets/Graduation Cap.png" width="45" height="40" class="d-inline-block align-top" alt="">
+                <img src="graduation cap.png" class="d-inline-block align-top w-45 h-40" alt="">
                 <span class="navbar-text">Student Management System</span>
             </div>
         </a>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto d-flex align-items-center">
-                <li class="nav-item mr-2">
-                    <div class="input-group">
+            <ul class="navbar-nav ml-auto d-flex align-items-center search-container">
+                <li class="nav-item">
+                    <div class="input-group search-input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="search-icon"><i class="fas fa-search"></i></span>
                         </div>
                         <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light ml-2" type="submit">Search</button>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
+                <li class="nav-item search-icon">
+                    <button class="btn-search btn-outline-light" type="button" onclick="toggleSearch()">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </li>
             </ul>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="container mt-5">
-        <div class="d-flex justify-content-between mb-4">
-            <button class="btn btn-dark" data-toggle="modal" data-target="#studentModal">Add Student</button>
+    <div class="container mt-4 mr-0 ">
+        <div class="d-flex justify-content-end mb-3">
+            <button class="btn" data-toggle="modal" data-target="#studentModal"> + Add Student</button>
         </div>
-        <div class="row" id="studentList"></div>
+        <div class="row mr-0" id="studentList"></div>
     </div>
 
     <!-- Add Student Modal -->
@@ -70,10 +75,10 @@
                             </select>
                         </div>
                         <div class="form-group">
-   
-                            <input type="tel" class="form-control" id="studentContact" placeholder="Contact" required>
+                            <input type="tel" class="form-control" id="studentContact" placeholder="Contact" pattern="[0-9]{10}" maxlength="10" required>
+                            <div class="invalid-feedback">Please enter a valid contact number.</div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Add</button>
+                        <button type="submit" class="btn-add btn-primary">Add</button>
                     </form>
                 </div>
             </div>
