@@ -1,0 +1,56 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h1, h2 {
+    color: #343a40;
+}
+
+.navbar {
+    background-color: #032830;
+}
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar-brand .navbar-text {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.nav-item .form-control {
+    margin-right: 10px;
+}
+
+.card {
+    margin-bottom: 20px;
+    width: 355px;
+    height: 500px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 227px;
+    background-color: #f1c40f;
+}
+
+.card-body {
+    justify-content: center;
+    align-items: center;
+    background-color: #032830;
+}
+
+.card .btn-danger {
+    background-color: red;
+    border-color: red;
+}
+
+.btn-dark {
+    background-color: #032830;
+    border-color: #032830;
+}
