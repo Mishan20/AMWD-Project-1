@@ -24,7 +24,7 @@ function renderStudentList() {
         const card = document.createElement('div');
         card.className = 'col-12 col-md-6 col-lg-4 mb-4';
         card.innerHTML = `
-            <div class="card text-center">
+            <div class="card text-center mx-auto">
                 <div class="card-header">
                     <img src="${student.gender === 'Male' ? './assets/student 1.png' : './assets/student 2.png'}" alt="${student.gender}" class="rounded-circle w-150 h-150">
                 </div>
