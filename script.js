@@ -13,14 +13,7 @@ function deleteStudent(index) {
     renderStudentList();
 }
 
-function toggleSearch() {
-    const searchInputGroup = document.querySelector('.search-input-group');
-    if (searchInputGroup.style.display === 'flex') {
-        searchInputGroup.style.display = 'none';
-    } else {
-        searchInputGroup.style.display = 'flex';
-    }
-}
+
 
 // Function to render the student list
 function renderStudentList() {
@@ -29,7 +22,7 @@ function renderStudentList() {
 
     students.forEach((student, index) => {
         const card = document.createElement('div');
-        card.className = 'col-md-4  mr-0';
+        card.className = 'col-12 col-md-6 col-lg-4 mb-4';
         card.innerHTML = `
             <div class="card text-center">
                 <div class="card-header">

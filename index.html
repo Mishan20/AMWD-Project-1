@@ -30,21 +30,16 @@
                         <button class="btn btn-outline-light ml-2" type="submit">Search</button>
                     </div>
                 </li>
-                <li class="nav-item search-icon">
-                    <button class="btn-search btn-outline-light" type="button" onclick="toggleSearch()">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </li>
             </ul>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="container mt-4 mr-0 ">
+    <div class="container mt-4 ">
         <div class="d-flex justify-content-end mb-3">
             <button class="btn" data-toggle="modal" data-target="#studentModal"> + Add Student</button>
-        </div>
-        <div class="row mr-0" id="studentList"></div>
+        </div class="d-flex justify-content-between">
+        <div class="row" id="studentList"></div>
     </div>
 
     <!-- Add Student Modal -->
