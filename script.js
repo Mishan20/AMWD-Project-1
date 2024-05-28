@@ -1,13 +1,5 @@
 // Initialize an empty array to store student details
-let students = [
-    {
-        name: 'John Doe',
-        dob: '1990-01-01',
-        address: '123 Main St',
-        gender: 'Male',
-        contact: '1234567890'
-    },
-];
+let students = [];
 
 // Function to add a student
 function addStudent(name, dob, address, gender, contact) {
