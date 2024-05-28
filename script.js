@@ -26,7 +26,7 @@ function renderStudentList() {
         card.innerHTML = `
             <div class="card text-center">
                 <div class="card-header">
-                    <img src="${student.gender === 'Male' ? 'student 1.png' : 'student 2.png'}" alt="${student.gender}" class="rounded-circle w-150 h-150">
+                    <img src="${student.gender === 'Male' ? './assets/student 1.png' : './assets/student 2.png'}" alt="${student.gender}" class="rounded-circle w-150 h-150">
                 </div>
                 <div class="card-body  text-white">
                     <p class="card-text"><strong>Student Name - </strong> ${student.name}</p>
