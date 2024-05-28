@@ -1,5 +1,13 @@
 // Initialize an empty array to store student details
-let students = [];
+let students = [
+    {
+        name: 'John Doe',
+        dob: '1990-01-01',
+        address: '123 Main St',
+        gender: 'Male',
+        contact: '1234567890'
+    },
+];
 
 // Function to add a student
 function addStudent(name, dob, address, gender, contact) {
@@ -13,8 +21,6 @@ function deleteStudent(index) {
     renderStudentList();
 }
 
-
-
 // Function to render the student list
 function renderStudentList() {
     const studentList = document.getElementById('studentList');
@@ -24,23 +30,80 @@ function renderStudentList() {
         const card = document.createElement('div');
         card.className = 'col-12 col-md-6 col-lg-4 mb-4';
         card.innerHTML = `
-            <div class="card text-center mx-auto">
+            <div class="card mx-auto">
                 <div class="card-header">
-                    <img src="${student.gender === 'Male' ? './assets/student 1.png' : './assets/student 2.png'}" alt="${student.gender}" class="rounded-circle w-150 h-150">
+                    <img src="${student.gender === 'Male' ? './assets/student 1.png' : './assets/student 2.png'}" alt="${student.gender}" class="rounded-circle w-150 h-150 mx-auto">
                 </div>
-                <div class="card-body  text-white">
-                    <p class="card-text"><strong>Student Name - </strong> ${student.name}</p>
-                    <p class="card-text"><strong>Gender - </strong> ${student.gender}</p>
-                    <p class="card-text"><strong>DOB - </strong> ${student.dob}</p>
-                    <p class="card-text"><strong>Address - </strong> ${student.address}</p>
-                    <p class="card-text"><strong>Contact - </strong> ${student.contact}</p>
-                    <button class="btn btn-danger mt-3" onclick="deleteStudent(${index})">Delete</button>
+                <div class="card-body text-white">
+                    <div class="text-container">
+                        <div>
+                            <div class="card-text d-flex justify-content-left">
+                                <strong>Student Name</strong>
+                            </div>
+                            <div class="card-text d-flex justify-content-left">
+                                <strong>Gender</strong>
+                            </div>
+                            <div class="card-text d-flex justify-content-left">
+                                <strong>DOB</strong> 
+                            </div>
+                            <div class="card-text d-flex justify-content-left">
+                                 <strong>Address</strong> 
+                            </div>
+                            <div class="card-text d-flex justify-content-left">
+                                <strong>Contact</strong> 
+                            </div>
+                         </div>
+
+                        <div>
+                            <div class="card-text d-flex justify-content-left">
+                                <span> - </span>
+                            </div>
+                            <div class="card-text d-flex justify-content-left">
+                                <span> - </span>
+                            </div>
+                            <div class="card-text d-flex justify-content-center">
+                                <span> - </span>
+                            </div>
+                            <div class="card-text d-flex justify-content-center">
+                                <span> - </span>
+                            </div>
+                            <div class="card-text d-flex justify-content-center">
+                                <span> - </span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="card-text d-flex justify-content-left">
+                                <span>${student.name}</span>
+                </div>
+                <div class="card-text d-flex justify-content-left">
+                    <span>${student.gender}</span>
+                </div>
+                <div class="card-text d-flex justify-content-left">
+                    <span>${student.dob}</span>
+                </div>
+                <div class="card-text d-flex justify-content-left">
+                    <span>${student.address}</span>
+                </div>
+                <div class="card-text d-flex justify-content-left">
+                    <span>${student.contact}</span>
+                </div>
+                    </div>
+                </div>
+
+
+
+
+
+                        
+                        <button class="btn-delete btn-danger mt-3" onclick="deleteStudent(${index})">Delete</button>
                 </div>
             </div>
         `;
         studentList.appendChild(card);
     });
 }
+
 
 
 // Event listener for the form submission
