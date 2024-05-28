@@ -75,28 +75,22 @@ function renderStudentList() {
                         <div>
                             <div class="card-text d-flex justify-content-left">
                                 <span>${student.name}</span>
-                </div>
-                <div class="card-text d-flex justify-content-left">
-                    <span>${student.gender}</span>
-                </div>
-                <div class="card-text d-flex justify-content-left">
-                    <span>${student.dob}</span>
-                </div>
-                <div class="card-text d-flex justify-content-left">
-                    <span>${student.address}</span>
-                </div>
-                <div class="card-text d-flex justify-content-left">
-                    <span>${student.contact}</span>
-                </div>
-                    </div>
-                </div>
-
-
-
-
-
-                        
-                        <button class="btn-delete btn-danger mt-3" onclick="deleteStudent(${index})">Delete</button>
+                            </div>
+                            <div class="card-text d-flex justify-content-left">
+                                <span>${student.gender}</span>
+                            </div>
+                            <div class="card-text d-flex justify-content-left">
+                                <span>${student.dob}</span>
+                            </div>
+                            <div class="card-text d-flex justify-content-left">
+                                <span>${student.address}</span>
+                            </div>
+                            <div class="card-text d-flex justify-content-left">
+                                <span>${student.contact}</span>
+                            </div>
+                        </div>
+                    </div>   
+                     <button class="btn-delete btn-danger mt-3" onclick="deleteStudent(${index})">Delete</button>
                 </div>
             </div>
         `;
